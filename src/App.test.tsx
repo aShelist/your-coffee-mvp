@@ -3,13 +3,13 @@ import { MemoryRouter } from 'react-router-dom';
 import { App } from './App';
 
 describe('App routing', () => {
-  it('renders HomePage at / with greeting', () => {
+  it('renders HomePage at /', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByRole('heading')).toHaveTextContent(/Главная.*Алексей/);
+    expect(screen.getByText(/Привет, Алексей/)).toBeInTheDocument();
   });
 
   it('renders MenuPage at /menu', () => {

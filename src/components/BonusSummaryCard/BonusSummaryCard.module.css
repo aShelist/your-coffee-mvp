@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface-beige);
+  border-radius: 20px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.iconWrapper {
+  color: var(--highlight);
+  flex-shrink: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.column:last-child {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.levelPill {
+  background: rgba(244, 171, 63, 0.24);
+  color: var(--accent-pressed);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 14px;
+}

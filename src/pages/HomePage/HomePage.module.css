@@ -1,0 +1,13 @@
+.page {
+  padding-top: 4px;
+}
+
+.spacer {
+  height: 14px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
