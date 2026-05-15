@@ -12,7 +12,8 @@ export function GreetingCard({ name, photoUrl }: Props) {
   return (
     <section className={styles.card} aria-label="Приветствие">
       <div className={styles.avatar}>
-        {showImage ? (
+        <span className={styles.avatarInitial} aria-hidden="true">{initial}</span>
+        {showImage && (
           <img
             src={photoUrl}
             alt={safeName}
@@ -20,8 +21,6 @@ export function GreetingCard({ name, photoUrl }: Props) {
             referrerPolicy="no-referrer"
             onError={() => setImageBroken(true)}
           />
-        ) : (
-          <span className={styles.avatarInitial} aria-hidden="true">{initial}</span>
         )}
       </div>
       <div className={styles.text}>
