@@ -12,6 +12,7 @@ type CartState = {
   remove: (menuItemId: string) => void;
   clear: () => void;
   totalCount: () => number;
+  quantityOf: (menuItemId: string) => number;
 };
 
 export const useCartStore = create<CartState>()(
@@ -38,6 +39,8 @@ export const useCartStore = create<CartState>()(
         })),
       clear: () => set({ items: [] }),
       totalCount: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
+      quantityOf: (menuItemId) =>
+        get().items.find((i) => i.menuItemId === menuItemId)?.quantity ?? 0,
     }),
     { name: 'yc-cart' }
   )

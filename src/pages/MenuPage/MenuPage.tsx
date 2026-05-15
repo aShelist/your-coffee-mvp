@@ -26,6 +26,7 @@ export function MenuPage() {
   const [category, setCategory] = useState<Category>('coffee');
   const items = getByCategory(category);
   const add = useCartStore((s) => s.add);
+  const cartItems = useCartStore((s) => s.items);
 
   return (
     <div className={styles.page}>
@@ -38,9 +39,18 @@ export function MenuPage() {
         />
       ) : (
         <div className={styles.list}>
-          {items.map((item) => (
-            <MenuItemCard key={item.id} item={item} onAdd={add} />
-          ))}
+          {items.map((item) => {
+            const inCartQuantity =
+              cartItems.find((ci) => ci.menuItemId === item.id)?.quantity ?? 0;
+            return (
+              <MenuItemCard
+                key={item.id}
+                item={item}
+                inCartQuantity={inCartQuantity}
+                onAdd={add}
+              />
+            );
+          })}
         </div>
       )}
     </div>

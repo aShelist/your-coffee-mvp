@@ -1,8 +1,15 @@
+import { beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { BottomNav } from './BottomNav';
+import { useCartStore } from '../../stores/cartStore';
 
 describe('BottomNav', () => {
+  beforeEach(() => {
+    useCartStore.setState({ items: [] });
+    localStorage.clear();
+  });
+
   it('renders four tabs', () => {
     render(
       <MemoryRouter>
@@ -33,5 +40,31 @@ describe('BottomNav', () => {
     );
     const homeLink = screen.getByText('Главная').closest('a');
     expect(homeLink?.className).not.toMatch(/active/);
+  });
+
+  it('does not show cart badge when cart is empty', () => {
+    render(
+      <MemoryRouter>
+        <BottomNav />
+      </MemoryRouter>
+    );
+    expect(screen.queryByLabelText(/в корзине/)).not.toBeInTheDocument();
+  });
+
+  it('shows cart badge with count when cart has items', () => {
+    useCartStore.setState({
+      items: [
+        { menuItemId: 'latte', quantity: 2 },
+        { menuItemId: 'cappuccino', quantity: 1 },
+      ],
+    });
+    render(
+      <MemoryRouter>
+        <BottomNav />
+      </MemoryRouter>
+    );
+    const badge = screen.getByLabelText(/в корзине 3/);
+    expect(badge).toBeInTheDocument();
+    expect(badge).toHaveTextContent('3');
   });
 });

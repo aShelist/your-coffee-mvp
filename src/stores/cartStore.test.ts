@@ -55,4 +55,16 @@ describe('cartStore', () => {
     expect(useCartStore.getState().items).toEqual([]);
     expect(useCartStore.getState().totalCount()).toBe(0);
   });
+
+  it('quantityOf returns 0 for items not in cart', () => {
+    expect(useCartStore.getState().quantityOf('latte')).toBe(0);
+  });
+
+  it('quantityOf returns the count for items in cart', () => {
+    useCartStore.getState().add('latte');
+    useCartStore.getState().add('latte');
+    useCartStore.getState().add('cappuccino');
+    expect(useCartStore.getState().quantityOf('latte')).toBe(2);
+    expect(useCartStore.getState().quantityOf('cappuccino')).toBe(1);
+  });
 });

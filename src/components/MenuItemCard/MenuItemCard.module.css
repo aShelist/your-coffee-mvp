@@ -8,6 +8,12 @@
   background: var(--surface);
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.inCart {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(255, 145, 73, 0.25);
 }
 
 .image {
@@ -75,9 +81,19 @@
   justify-content: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 80ms ease;
+  transition: transform 80ms ease, background-color 150ms ease;
 }
 
 .addButton:active {
   transform: scale(0.96);
+}
+
+.addButtonInCart {
+  background: var(--accent);
+}
+
+.countLabel {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
 }

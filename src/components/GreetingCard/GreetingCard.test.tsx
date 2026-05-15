@@ -11,4 +11,9 @@ describe('GreetingCard', () => {
     render(<GreetingCard name="Павел" photoUrl="https://example.com/p.jpg" />);
     expect(screen.getByAltText('Павел')).toHaveAttribute('src', 'https://example.com/p.jpg');
   });
+
+  it('renders first letter initial when no photoUrl', () => {
+    render(<GreetingCard name="павел" />);
+    expect(screen.getByText('П')).toBeInTheDocument();
+  });
 });

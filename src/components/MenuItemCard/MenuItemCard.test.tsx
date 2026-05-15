@@ -37,4 +37,18 @@ describe('MenuItemCard', () => {
     await user.click(screen.getByRole('button', { name: /Добавить/ }));
     expect(onAdd).toHaveBeenCalledWith('raf-lavender');
   });
+
+  it('shows quantity inside the button when item is in cart', () => {
+    render(<MenuItemCard item={item} inCartQuantity={3} onAdd={() => {}} />);
+    const btn = screen.getByRole('button', { name: /в корзине 3/i });
+    expect(btn).toHaveTextContent('3');
+  });
+
+  it('still adds when in-cart button is clicked', async () => {
+    const user = userEvent.setup();
+    const onAdd = vi.fn();
+    render(<MenuItemCard item={item} inCartQuantity={1} onAdd={onAdd} />);
+    await user.click(screen.getByRole('button', { name: /в корзине 1/i }));
+    expect(onAdd).toHaveBeenCalledWith('raf-lavender');
+  });
 });
