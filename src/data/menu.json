@@ -1,0 +1,92 @@
+[
+  {
+    "id": "espresso",
+    "category": "coffee",
+    "name": "Эспрессо",
+    "description": "Крепкий концентрированный кофе из свежеобжаренных зёрен",
+    "price": 150,
+    "bonusPrice": 120,
+    "image": "https://placehold.co/200x200/593a3a/ffffff?text=%D0%AD%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%BE"
+  },
+  {
+    "id": "cappuccino",
+    "category": "coffee",
+    "name": "Капучино",
+    "description": "Классика на основе эспрессо и взбитого молока",
+    "price": 250,
+    "bonusPrice": 200,
+    "image": "https://placehold.co/200x200/593a3a/ffffff?text=%D0%9A%D0%B0%D0%BF%D1%83%D1%87%D0%B8%D0%BD%D0%BE"
+  },
+  {
+    "id": "latte",
+    "category": "coffee",
+    "name": "Латте",
+    "description": "Эспрессо с большим количеством молока и нежной пенкой",
+    "price": 280,
+    "bonusPrice": 230,
+    "image": "https://placehold.co/200x200/593a3a/ffffff?text=%D0%9B%D0%B0%D1%82%D1%82%D0%B5"
+  },
+  {
+    "id": "raf-lavender",
+    "category": "coffee",
+    "name": "Раф с лавандой",
+    "description": "Авторский сладкий кофе с нежной пенкой и лавандой",
+    "price": 350,
+    "bonusPrice": 300,
+    "image": "https://placehold.co/200x200/593a3a/ffffff?text=%D0%A0%D0%B0%D1%84"
+  },
+  {
+    "id": "cheesecake",
+    "category": "dessert",
+    "name": "Чизкейк Нью-Йорк",
+    "description": "Классический американский десерт со сливочным сыром",
+    "price": 320,
+    "bonusPrice": 280,
+    "image": "https://placehold.co/200x200/8f6341/ffffff?text=%D0%A7%D0%B8%D0%B7%D0%BA%D0%B5%D0%B9%D0%BA"
+  },
+  {
+    "id": "brownie",
+    "category": "dessert",
+    "name": "Брауни",
+    "description": "Шоколадный десерт с орехами и насыщенным вкусом",
+    "price": 220,
+    "bonusPrice": 180,
+    "image": "https://placehold.co/200x200/8f6341/ffffff?text=%D0%91%D1%80%D0%B0%D1%83%D0%BD%D0%B8"
+  },
+  {
+    "id": "cheese-dessert",
+    "category": "dessert",
+    "name": "Сырный десерт",
+    "description": "Воздушный десерт с кремовой текстурой",
+    "price": 250,
+    "bonusPrice": 200,
+    "image": "https://placehold.co/200x200/8f6341/ffffff?text=%D0%A1%D1%8B%D1%80%D0%BD%D1%8B%D0%B9"
+  },
+  {
+    "id": "matcha-latte",
+    "category": "not-coffee",
+    "name": "Матча латте",
+    "description": "Японский зелёный чай маття с молоком",
+    "price": 320,
+    "bonusPrice": 270,
+    "image": "https://placehold.co/200x200/ff9149/ffffff?text=%D0%9C%D0%B0%D1%82%D1%87%D0%B0"
+  },
+  {
+    "id": "cocoa",
+    "category": "not-coffee",
+    "name": "Какао",
+    "description": "Горячий шоколадный напиток с маршмеллоу",
+    "price": 200,
+    "bonusPrice": 160,
+    "image": "https://placehold.co/200x200/ff9149/ffffff?text=%D0%9A%D0%B0%D0%BA%D0%B0%D0%BE"
+  },
+  {
+    "id": "sea-buckthorn-tea",
+    "category": "not-coffee",
+    "name": "Чай облепиховый",
+    "description": "Согревающий чай с ягодами облепихи и мёдом",
+    "price": 180,
+    "bonusPrice": 150,
+    "image": "https://placehold.co/200x200/ff9149/ffffff?text=%D0%9E%D0%B1%D0%BB%D0%B5%D0%BF%D0%B8%D1%85%D0%B0"
+  }
+]

@@ -23,6 +23,9 @@ npm test
 
 URL мини-аппы: см. Vercel Dashboard.
 
-## Бот
+## Демо
+
+- Мини-аппа: https://your-coffee-mvp.vercel.app/
+- Бот в Telegram: https://t.me/coffeaibot
 
 Бот создан через `@BotFather`, в нём настроена кнопка меню, открывающая мини-аппу.

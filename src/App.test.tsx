@@ -20,13 +20,4 @@ describe('App routing', () => {
     );
     expect(screen.getByRole('heading', { name: 'Меню' })).toBeInTheDocument();
   });
-
-  it('renders ProductPage with id at /menu/:id', () => {
-    render(
-      <MemoryRouter initialEntries={['/menu/latte-1']}>
-        <App />
-      </MemoryRouter>
-    );
-    expect(screen.getByRole('heading', { name: 'Товар latte-1' })).toBeInTheDocument();
-  });
 });

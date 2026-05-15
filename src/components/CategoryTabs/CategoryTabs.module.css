@@ -1,0 +1,34 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--surface);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.tab:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.active {
+  background: var(--button-dark);
+  color: var(--surface);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.active:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
