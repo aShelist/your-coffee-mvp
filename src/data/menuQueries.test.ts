@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getByCategory } from './menuQueries';
+import { getById, getByCategory } from './menuQueries';
 
 describe('getByCategory', () => {
   it('returns coffee items for category=coffee', () => {
@@ -19,5 +19,17 @@ describe('getByCategory', () => {
     const items = getByCategory('not-coffee');
     expect(items.length).toBeGreaterThan(0);
     expect(items.every((i) => i.category === 'not-coffee')).toBe(true);
+  });
+});
+
+describe('getById', () => {
+  it('returns the item with the given id', () => {
+    const item = getById('raf-lavender');
+    expect(item).toBeDefined();
+    expect(item?.name).toBe('Раф с лавандой');
+  });
+
+  it('returns undefined for unknown id', () => {
+    expect(getById('nonexistent')).toBeUndefined();
   });
 });

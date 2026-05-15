@@ -9,6 +9,8 @@ export type CartItem = {
 type CartState = {
   items: CartItem[];
   add: (menuItemId: string) => void;
+  remove: (menuItemId: string) => void;
+  clear: () => void;
   totalCount: () => number;
 };
 
@@ -30,6 +32,11 @@ export const useCartStore = create<CartState>()(
           }
           return { items: [...state.items, { menuItemId, quantity: 1 }] };
         }),
+      remove: (menuItemId) =>
+        set((state) => ({
+          items: state.items.filter((i) => i.menuItemId !== menuItemId),
+        })),
+      clear: () => set({ items: [] }),
       totalCount: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
     }),
     { name: 'yc-cart' }

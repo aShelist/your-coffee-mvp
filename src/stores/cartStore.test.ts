@@ -37,4 +37,22 @@ describe('cartStore', () => {
     expect(items.find(i => i.menuItemId === 'cappuccino-1')?.quantity).toBe(1);
     expect(totalCount()).toBe(3);
   });
+
+  it('removes an item entirely', () => {
+    useCartStore.getState().add('latte');
+    useCartStore.getState().add('latte');
+    useCartStore.getState().add('cappuccino');
+    useCartStore.getState().remove('latte');
+    const { items, totalCount } = useCartStore.getState();
+    expect(items).toEqual([{ menuItemId: 'cappuccino', quantity: 1 }]);
+    expect(totalCount()).toBe(1);
+  });
+
+  it('clears all items', () => {
+    useCartStore.getState().add('latte');
+    useCartStore.getState().add('cappuccino');
+    useCartStore.getState().clear();
+    expect(useCartStore.getState().items).toEqual([]);
+    expect(useCartStore.getState().totalCount()).toBe(0);
+  });
 });

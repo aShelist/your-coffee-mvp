@@ -1,0 +1,69 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 102px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 102px;
+  height: 113px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding-right: 40px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.quantity {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.removeButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 100ms ease;
+}
+
+.removeButton:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
