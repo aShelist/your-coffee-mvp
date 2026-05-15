@@ -1,0 +1,36 @@
+.row {
+  background: var(--surface);
+  border-radius: 15px;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.date {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.items {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.bonus {
+  font-size: 13px;
+  color: var(--highlight);
+  font-weight: 600;
+}

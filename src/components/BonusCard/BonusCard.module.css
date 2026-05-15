@@ -1,0 +1,74 @@
+.card {
+  background: linear-gradient(180deg, #503727 0%, #b67e58 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.iconBox {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 12px 0 28px;
+}
+
+.levelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.levelName {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.toNext {
+  opacity: 0.7;
+}
+
+.progress {
+  height: 8px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #e25c08 0%, #ffc300 100%);
+  border-radius: 4px;
+  transition: width 200ms ease;
+}
+
+.hint {
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+}
