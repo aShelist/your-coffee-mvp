@@ -1,0 +1,17 @@
+:root {
+  --bg: #fff7e3;
+  --surface: #ffffff;
+  --surface-beige: #f6efeb;
+  --surface-light-beige: #f5e6d8;
+  --accent: #ff9149;
+  --accent-pressed: #ff8936;
+  --highlight: #fab005;
+  --ai-card: #8f6341;
+  --text: #000000;
+  --text-muted: rgba(0, 0, 0, 0.65);
+  --text-on-accent: #ffffff;
+  --radius-card: 20px;
+  --radius-button: 10px;
+  --shadow-card: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --bottom-nav-height: 64px;
+}

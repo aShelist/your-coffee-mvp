@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: var(--bottom-nav-height);
+}
+
+.main {
+  flex: 1;
+  padding: 16px;
+}
